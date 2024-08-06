@@ -35,17 +35,14 @@ function ReactPdf() {
     console.log('handlePageChange', pageNumber);
     if (pageNumber > 0 && pageNumber <= numPages) {
       setCurrentPage(pageNumber);
+      pageRefs.current[pageNumber]?.scrollIntoView({ behavior: 'smooth' });
     }
   };
   const handleRotateLeft = () => setRotation((prevRotation) => (prevRotation - 90) % 360);
   const handleRotateRight = () => setRotation((prevRotation) => (prevRotation + 90) % 360);
 
-  useEffect(() => {
-    console.log('currentPage updated:', currentPage);
-    pageRefs.current[currentPage]?.scrollIntoView({ behavior: 'smooth' });
-  }, [currentPage]);
 
-  const handleScroll = () => {
+  const handleScroll = useCallback(() => {
     if (containerRef.current) {
       const containerTop = containerRef.current.getBoundingClientRect().top;
       let closestPage = currentPage;
@@ -67,7 +64,7 @@ function ReactPdf() {
         setCurrentPage(closestPage);
       }
     }
-  };
+  }, [pageNumbers, currentPage, containerRef]);
 
   useEffect(() => {
     const container = containerRef.current;
@@ -75,7 +72,7 @@ function ReactPdf() {
       container.addEventListener('scroll', handleScroll);
       return () => container.removeEventListener('scroll', handleScroll);
     }
-  }, [pageNumbers, currentPage]);
+  }, [pageNumbers, currentPage, handleScroll]);
 
   console.log('Rendering MyApp, numPages:', numPages, 'pageNumbers:', pageNumbers);
 

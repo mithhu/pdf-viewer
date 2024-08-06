@@ -3,12 +3,12 @@ import React from 'react';
 import './Toolbar.css';
 
 const Toolbar = ({ currentPage, numPages, zoom, onZoomIn, onZoomOut, onPageChange, onRotateLeft, onRotateRight }) => {
-  const handlePageInputChange = (e) => {
-    const pageNumber = Number(e.target.value);
-    if (pageNumber > 0 && pageNumber <= numPages) {
-      onPageChange(pageNumber);
-    }
-  };
+    const handlePageInputChange = (e) => {
+        const pageNumber = parseInt(e.target.value, 10);
+        if (!isNaN(pageNumber) && pageNumber > 0 && pageNumber <= numPages) {
+          onPageChange(pageNumber);
+        }
+      };
 
   return (
     <div className="toolbar">
