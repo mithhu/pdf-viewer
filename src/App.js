@@ -8,8 +8,10 @@ function App() {
 
   return (
     <div className="App">
+      <div style={{padding: '20px'}}>
       <button onClick={() => setSelected(true)}>React Pdf</button>
       <button onClick={() => setSelected(false)}>Iframe Pdf</button>
+      </div>
       {selected ? <ReactPdf /> : <IframePdf pdfUrl="/pdf.pdf" />}
     </div>
   );

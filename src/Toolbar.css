@@ -1,0 +1,45 @@
+/* src/Toolbar.css */
+.toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    position: fixed;
+    top: 50px;
+    left: 0;
+    right: 0;
+    z-index: 1000; /* Ensure the toolbar is above other content */
+  }
+  
+  .toolbar-left, .toolbar-center, .toolbar-right {
+    display: flex;
+    align-items: center;
+  }
+  
+  .menu-button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  
+  .toolbar-title {
+    margin-left: 10px;
+  }
+  
+  .toolbar-center span, .toolbar-center button {
+    margin: 0 5px;
+  }
+  
+  .page-input {
+    width: 40px;
+    text-align: center;
+    margin-right: 5px;
+  }
+  
+  .toolbar-right button {
+    margin-left: 10px;
+  }
