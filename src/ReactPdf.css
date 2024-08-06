@@ -1,0 +1,91 @@
+/* .pdf-viewer {
+  background-color: #2c2c2c;
+  color: white;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.top-bar {
+  background-color: #1c1c1c;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #444;
+}
+
+.content {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+.thumbnails {
+  width: 150px;
+  overflow-y: auto;
+  background-color: #2c2c2c;
+  padding: 10px;
+  border-right: 1px solid #444;
+}
+
+.thumbnails .react-pdf__Thumbnail {
+  margin-bottom: 10px;
+  cursor: pointer;
+  border: 2px solid transparent;
+}
+
+.thumbnails .react-pdf__Thumbnail:hover {
+  border-color: #666;
+}
+
+.page-view {
+  flex: 1;
+  overflow: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background-color: #1c1c1c;
+}
+
+.react-pdf__Page {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  background-color: white;
+  margin: 0 auto;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #2c2c2c;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #666666;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555555;
+}
+
+.zoom-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.zoom-controls button {
+  background-color: #444;
+  border: none;
+  color: white;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.zoom-controls button:hover {
+  background-color: #555;
+} */

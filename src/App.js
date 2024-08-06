@@ -1,23 +1,16 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
+import ReactPdf from './ReactPdf';
+import IframePdf from './IframePdf';
 
 function App() {
+  const [selected, setSelected] = useState(true);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <button onClick={() => setSelected(true)}>React Pdf</button>
+      <button onClick={() => setSelected(false)}>Iframe Pdf</button>
+      {selected ? <ReactPdf /> : <IframePdf pdfUrl="/pdf.pdf" />}
     </div>
   );
 }
